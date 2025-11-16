@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Muscles and Bones Anatomy Body Animation - 3D Model</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100dvh;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      z-index: 0;
+    }
+
+    .sketchfab-embed-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      z-index: 1;
+      background: transparent;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      border: none;
+      background: transparent;
+    }
+
+    /* ⭐ LOGO BUTTON STYLE (dùng chung) */
+    .btn-logo {
+      width: 55px;
+      height: 55px;
+      cursor: pointer;
+      z-index: 9999;
+      position: fixed;
+      bottom: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: 0.2s;
+    }
+
+    .btn-logo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: white;
+    }
+
+    .btn-logo:hover {
+      transform: scale(1.1);
+    }
+
+    .wiki-logo { right: 15px; border-radius: 50%; }
+    .wiki-logo img { border-radius: 50%; }
+
+    .wayground-logo { left: 15px; }
+
+    .youtube-logo { left: 50%; transform: translateX(-50%); border-radius: 12px; }
+
+    .youtube-logo img { border-radius: 12px; background: #ffffff; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ⭐ NHÚNG MÔ HÌNH -->
+  <div class="sketchfab-embed-wrapper">
+    <iframe id="api-frame" title="Muscles and Bones Anatomy body Animation" frameborder="0"
+      allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+      allow="autoplay; fullscreen; xr-spatial-tracking; execution-while-out-of-viewport; execution-while-not-rendered; web-share"
+      src="https://sketchfab.com/models/db7be21587804a32ab3a99e165c56e19/embed?autostart=1&transparent=1&camera=0&ui_hint=0&ui_controls=1&ui_infos=0">
+    </iframe>
+
+    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+      <a href="https://sketchfab.com/3d-models/muscles-and-bones-anatomy-body-animation-db7be21587804a32ab3a99e165c56e19"
+        target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
+        Muscles and Bones Anatomy Body Animation
+      </a> by
+      <a href="https://sketchfab.com/flarar" target="_blank" rel="nofollow"
+        style="font-weight: bold; color: #1CAAD9;">flarar-01</a> on
+      <a href="https://sketchfab.com" target="_blank" rel="nofollow"
+        style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+    </p>
+  </div>
+
+  <!-- ⭐ Logo Wikipedia -->
+  <a class="btn-logo wiki-logo" href="https://vi.wikipedia.org/wiki/H%E1%BB%87_v%E1%BA%ADn_%C4%91%E1%BB%99ng" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png" alt="Wikipedia">
+  </a>
+
+  <!-- ⭐ Logo WayGround (⭐ Ngôi sao) -->
+  <a class="btn-logo wayground-logo" href="https://wayground.com/join?gc=955896" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="WayGround Link">
+  </a>
+
+  <!-- ⭐ Logo YouTube (📺 Video giải phẫu) -->
+  <a class="btn-logo youtube-logo" href="https://www.youtube.com/watch?v=-yjeBtnXtFs&t=42s" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Video">
+  </a>
+
+  <!-- ⭐ Sketchfab API -->
+  <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+  <script>
+    const iframe = document.getElementById('api-frame');
+    const uid = 'db7be21587804a32ab3a99e165c56e19';
+
+    const client = new Sketchfab(iframe);
+
+    client.init(uid, {
+      success: function (api) {
+        api.start();
+        api.addEventListener('viewerready', function () {
+          console.log('✅ 3D model ready!');
+          api.setBackground({ color: [1, 1, 1], transparency: 0 });
+        });
+      },
+      error: function () {
+        console.error('❌ Sketchfab API initialization error');
+      }
+    });
+  </script>
+
+</body>
+</html>
