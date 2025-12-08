@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Human Brain - 3D Model</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100dvh;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      z-index: 0;
+    }
+
+    .sketchfab-embed-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      background: transparent;
+      z-index: 1;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      border: none;
+      background: transparent;
+      display: block;
+    }
+
+    /* 🌐 Wikipedia */
+    .wiki-logo {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      width: 55px;
+      height: 55px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+    .wiki-logo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: 0.2s;
+    }
+    .wiki-logo img:hover { transform: scale(1.1); }
+
+    /* ▶️ YouTube */
+    .yt-logo {
+      position: fixed;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 55px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+    .yt-logo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.35);
+      transition: 0.2s;
+    }
+    .yt-logo img:hover { transform: scale(1.1); }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 🧠 Human Brain Model -->
+  <div class="sketchfab-embed-wrapper">
+    <iframe id="api-frame" title="Human Brain" frameborder="0"
+      allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+      allow="autoplay; fullscreen; xr-spatial-tracking; execution-while-out-of-viewport;
+      execution-while-not-rendered; web-share"
+      src="https://sketchfab.com/models/7a27c17fd6c0488bb31ab093236a47fb/embed?autostart=1&transparent=1&camera=0&ui_hint=0&ui_controls=1&ui_infos=0">
+    </iframe>
+  </div>
+
+  <!-- 🌐 Wikipedia -->
+  <a class="wiki-logo" href="https://vi.wikipedia.org/wiki/N%C3%A3o_ng%C6%B0%E1%BB%9Di" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png" alt="Wikipedia">
+  </a>
+
+  <!-- ▶️ YouTube bài học -->
+  <a class="yt-logo" href="https://www.youtube.com/watch?v=MaGXk5ASPPc&t=154s" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Video">
+  </a>
+
+  <!-- 📌 Sketchfab API -->
+  <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+  <script>
+    const iframe = document.getElementById('api-frame');
+    const uid = '7a27c17fd6c0488bb31ab093236a47fb';
+
+    const client = new Sketchfab(iframe);
+    client.init(uid, {
+      success: function (api) {
+        api.start();
+        api.addEventListener('viewerready', function () {
+          console.log('🧠 Human Brain model ready!');
+          api.setBackground({ color: [1, 1, 1], transparency: 0 });
+        });
+      },
+      error: function () {
+        console.error('❌ Sketchfab API initialization error');
+      }
+    });
+  </script>
+
+</body>
+</html>
