@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>Streptococcus mutans - 3D Model</title>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100dvh;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      z-index: 0;
+    }
+
+    .sketchfab-embed-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      background: transparent;
+      z-index: 1;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      border: none;
+      background: transparent;
+      display: block;
+    }
+
+
+    /* =====================================
+       NÚT LIÊN KẾT
+       ===================================== */
+
+    .external-tools {
+      position: fixed;
+
+      top: 70px;
+      right: 18px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+
+      z-index: 99999;
+    }
+
+
+    .tool-button {
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255, 255, 255, 0.94);
+
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 50%;
+
+      box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.18);
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+
+    .tool-button:hover {
+      transform: scale(1.08);
+
+      background: #ffffff;
+
+      box-shadow:
+        0 5px 16px rgba(0, 0, 0, 0.25);
+    }
+
+
+    /* =====================================
+       WIKIPEDIA
+       ===================================== */
+
+    .wikipedia-logo {
+      width: 31px;
+      height: 31px;
+
+      object-fit: contain;
+    }
+
+
+    /* =====================================
+       LOA
+       ===================================== */
+
+    .speaker-icon {
+      width: 27px;
+      height: 27px;
+
+      fill: #111111;
+    }
+
+
+    /* =====================================
+       YOUTUBE
+       ===================================== */
+
+    .youtube-icon {
+      width: 30px;
+      height: 30px;
+
+      display: block;
+    }
+
+
+    .youtube-button:hover {
+      transform: scale(1.10);
+    }
+
+
+    @supports (padding: env(safe-area-inset-top)) {
+
+      body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================
+       MÔ HÌNH 3D STREPTOCOCCUS MUTANS
+       ===================================== -->
+
+  <div class="sketchfab-embed-wrapper">
+
+
+    <iframe
+      id="api-frame"
+
+      title="Streptococcus mutans"
+
+      frameborder="0"
+
+      allowfullscreen
+
+      mozallowfullscreen="true"
+
+      webkitallowfullscreen="true"
+
+      allow="
+        autoplay;
+        fullscreen;
+        xr-spatial-tracking;
+        execution-while-out-of-viewport;
+        execution-while-not-rendered;
+        web-share
+      "
+
+      src="https://sketchfab.com/models/a13e1ab50fdd411b8499c74d193a1bd6/embed?autostart=1&transparent=1&camera=0&ui_hint=0&ui_controls=1&ui_infos=0"
+    >
+
+    </iframe>
+
+
+
+    <!-- =====================================
+         NGUỒN
+         ===================================== -->
+
+    <p
+      style="
+        font-size: 13px;
+        font-weight: normal;
+        margin: 5px;
+        color: #4A4A4A;
+      "
+    >
+
+
+      <!-- LINK WIKIPEDIA ĐÃ SỬA -->
+
+      <a
+        href="https://en.wikipedia.org/wiki/Streptococcus_mutans"
+
+        target="_blank"
+
+        rel="noopener noreferrer"
+
+        style="
+          font-weight: bold;
+          color: #1CAAD9;
+        "
+      >
+
+        Streptococcus mutans
+
+      </a>
+
+
+      by
+
+
+      <a
+        href="https://sketchfab.com/ucam"
+
+        target="_blank"
+
+        rel="nofollow"
+
+        style="
+          font-weight: bold;
+          color: #1CAAD9;
+        "
+      >
+
+        UCAM University
+
+      </a>
+
+
+      on
+
+
+      <a
+        href="https://sketchfab.com"
+
+        target="_blank"
+
+        rel="nofollow"
+
+        style="
+          font-weight: bold;
+          color: #1CAAD9;
+        "
+      >
+
+        Sketchfab
+
+      </a>
+
+
+    </p>
+
+
+  </div>
+
+
+
+  <!-- =====================================
+       NÚT WIKIPEDIA + LOA + YOUTUBE
+       ===================================== -->
+
+  <div class="external-tools">
+
+
+
+    <!-- =====================================
+         WIKIPEDIA
+         ===================================== -->
+
+    <a
+      class="tool-button"
+
+      href="https://en.wikipedia.org/wiki/Streptococcus_mutans"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      title="Streptococcus mutans - Wikipedia"
+
+      aria-label="Open Streptococcus mutans Wikipedia"
+    >
+
+
+      <img
+        class="wikipedia-logo"
+
+        src="https://en.wikipedia.org/static/favicon/wikipedia.ico"
+
+        alt="Wikipedia"
+      >
+
+
+    </a>
+
+
+
+    <!-- =====================================
+         PHÁT ÂM / GOOGLE
+         ===================================== -->
+
+    <a
+      class="tool-button"
+
+      href="https://www.google.com/search?q=Streptococcus+mutans+pronunciation"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      title="Pronunciation - Streptococcus mutans"
+
+      aria-label="Open pronunciation"
+    >
+
+
+      <svg
+        class="speaker-icon"
+
+        viewBox="0 0 24 24"
+
+        xmlns="http://www.w3.org/2000/svg"
+      >
+
+
+        <path
+          d="
+            M3 9v6h4l5 4V5L7 9H3
+            zm13.5 3
+            a4.5 4.5 0 0 0-2.5-4.03
+            v8.05
+            A4.5 4.5 0 0 0 16.5 12
+            zm-2.5-8.5
+            v2.06
+            a7 7 0 0 1 0 12.88
+            v2.06
+            a9 9 0 0 0 0-17
+            z
+          "
+        />
+
+
+      </svg>
+
+
+    </a>
+
+
+
+    <!-- =====================================
+         YOUTUBE SHORTS
+         ===================================== -->
+
+    <a
+      class="tool-button youtube-button"
+
+      href="https://youtube.com/shorts/1sFjuerbnvU?feature=share"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      title="Video Streptococcus mutans"
+
+      aria-label="Open YouTube video"
+    >
+
+
+      <svg
+        class="youtube-icon"
+
+        viewBox="0 0 24 24"
+
+        xmlns="http://www.w3.org/2000/svg"
+      >
+
+
+        <!-- NỀN ĐỎ YOUTUBE -->
+
+        <path
+          d="
+            M23.5 6.2
+            a3 3 0 0 0-2.1-2.1
+            C19.5 3.6 12 3.6 12 3.6
+            s-7.5 0-9.4.5
+            A3 3 0 0 0 .5 6.2
+            C0 8.1 0 12 0 12
+            s0 3.9.5 5.8
+            a3 3 0 0 0 2.1 2.1
+            c1.9.5 9.4.5 9.4.5
+            s7.5 0 9.4-.5
+            a3 3 0 0 0 2.1-2.1
+            C24 15.9 24 12 24 12
+            s0-3.9-.5-5.8z
+          "
+
+          fill="#FF0000"
+        />
+
+
+        <!-- NÚT PLAY -->
+
+        <path
+          d="M9.5 15.5V8.5L15.8 12z"
+
+          fill="#FFFFFF"
+        />
+
+
+      </svg>
+
+
+    </a>
+
+
+  </div>
+
+
+
+  <!-- =====================================
+       SKETCHFAB VIEWER API
+       ===================================== -->
+
+  <script
+    src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js">
+  </script>
+
+
+
+  <script>
+
+
+    const iframe =
+      document.getElementById('api-frame');
+
+
+    const uid =
+      'a13e1ab50fdd411b8499c74d193a1bd6';
+
+
+    const client =
+      new Sketchfab(iframe);
+
+
+
+    client.init(uid, {
+
+
+      success: function (api) {
+
+
+        api.start();
+
+
+
+        api.addEventListener(
+
+          'viewerready',
+
+          function () {
+
+
+            console.log(
+              '✅ 3D model "Streptococcus mutans" ready!'
+            );
+
+
+
+            /* =================================
+               NỀN TRẮNG
+               ================================= */
+
+            api.setBackground(
+
+
+              {
+
+                color: [1, 1, 1],
+
+                transparency: 0
+
+              },
+
+
+              function (err) {
+
+
+                if (!err) {
+
+
+                  console.log(
+                    '🎨 Background set to white'
+                  );
+
+
+                }
+
+
+              }
+
+
+            );
+
+
+          }
+
+
+        );
+
+
+      },
+
+
+
+      error: function () {
+
+
+        console.error(
+          '❌ Sketchfab API initialization error'
+        );
+
+
+      }
+
+
+    });
+
+
+  </script>
+
+
+</body>
+
+</html>
